@@ -12,5 +12,7 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
         DbContextOptions options,
         IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
     {
+
     }
+    public DbSet<TravelEntry> TravelEntries => Set<TravelEntry>();
 }
